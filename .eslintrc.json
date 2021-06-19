@@ -28,7 +28,7 @@
     "import/prefer-default-export": 0,
     "func-names": [1, "as-needed"],
     "arrow-body-style": 1,
-    "semi": [1, "never"],
+    "semi": [1, "always"],
     "import/no-extraneous-dependencies": ["off", { "devDependencies": false }]
   },
   "env": {
