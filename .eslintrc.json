@@ -35,12 +35,13 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["eslint:recommended", "airbnb-base", "prettier"],
+  "extends": ["eslint:recommended", "airbnb-base", "plugin:react/recommended", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
+    "parser": "babel-eslint",
     "ecmaVersion": 11,
     "sourceType": "module"
   },
