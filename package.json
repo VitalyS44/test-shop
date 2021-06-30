@@ -51,6 +51,7 @@
         "url": "git@github.com:VitalyS44/webpackProject.git"
     },
     "dependencies": {
+        "@reduxjs/toolkit": "^1.6.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-redux": "^7.2.4",
