@@ -20,14 +20,15 @@ module.exports = merge(common, {
       {
         test: /\.(less|css)$/,
         use: [
-          'vue-style-loader',
+          { loader: 'vue-style-loader' },
           'style-loader',
           {
             loader: 'css-loader',
-            options: { sourceMap: true, importLoaders: 1, modules: true },
+            options: { sourceMap: true, importLoaders: 1, },
           },
           { loader: 'postcss-loader', options: { sourceMap: true } },
           { loader: 'less-loader', options: { sourceMap: true } },
+
         ],
       },
     ],

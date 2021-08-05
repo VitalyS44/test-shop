@@ -25,7 +25,6 @@ module.exports = merge(common, {
             options: {
               importLoaders: 2,
               sourceMap: false,
-              modules: true,
             },
           },
           'postcss-loader',
@@ -35,7 +34,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    // Extracts CSS into separate files
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
