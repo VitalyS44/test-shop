@@ -18,6 +18,7 @@ module.exports = merge(common, {
       {
         test: /\.(less|css)$/,
         use: [
+          'vue-style-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',

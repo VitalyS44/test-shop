@@ -20,6 +20,7 @@ module.exports = merge(common, {
       {
         test: /\.(less|css)$/,
         use: [
+          'vue-style-loader',
           'style-loader',
           {
             loader: 'css-loader',
