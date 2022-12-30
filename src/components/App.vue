@@ -1,4 +1,13 @@
 <template></template>
-<script></script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 
-<style lang="less"></style>
+export default defineComponent({
+    methods: {},
+    data() {
+        return {};
+    },
+});
+</script>
+
+<style scoped lang="less"></style>

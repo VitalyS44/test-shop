@@ -43,9 +43,15 @@ module.exports = {
                 use: 'vue-loader'
             },
             {
-                test: /\.(js|jsx|ts|tsx)$/,
+                test: /\.(js)$/,
                 use: 'babel-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+                options: { appendTsSuffixTo: [/\.vue$/] }
             },
             { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
 
