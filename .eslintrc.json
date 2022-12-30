@@ -48,7 +48,6 @@
     },
     "extends": [
         "plugin:vue/vue3-recommended",
-        "plugin:react/recommended",
         "eslint:recommended",
         "airbnb-base",
         "prettier"
@@ -62,7 +61,7 @@
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "plugins": ["prettier", "react"],
+    "plugins": ["prettier"],
     "settings": {
         "import/resolver": {
             "webpack": {
