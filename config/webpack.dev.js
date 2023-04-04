@@ -4,36 +4,34 @@ const path = require('path');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-    mode: 'development',
-    devtool: 'inline-source-map',
+  mode: 'development',
+  devtool: 'inline-source-map',
 
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        open: true,
-        hot: true,
-        port: 3000,
-    },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    open: true,
+    hot: true,
+    port: 3000,
+  },
 
-    module: {
-        rules: [
-            {
-                test: /\.(less|css)$/,
-                use: [
-                    { loader: 'vue-style-loader' },
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: { sourceMap: true, importLoaders: 1, },
-                    },
-                    { loader: 'postcss-loader', options: { sourceMap: true } },
-                    { loader: 'less-loader', options: { sourceMap: true } },
-
-                ],
-            },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'vue-style-loader' },
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true, importLoaders: 1, },
+          },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
         ],
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
+      },
     ],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 });
