@@ -1,15 +1,8 @@
 <template>
-    <div></div>
+    <div><Login /></div>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-    methods: {},
-    data() {
-        return {};
-    },
-});
+<script lang="ts" setup>
+import Login from './components/Login.vue';
 </script>
 
 <style scoped lang="scss"></style>
